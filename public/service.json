@@ -1,0 +1,52 @@
+[
+    {
+        
+        "name": "Yamaha R15M",
+        "price": "570,000",
+        "description": "R15M is a high performing bike which is available in the Bangladesh motorcycle market. R15M Price in BD is 565,000 Tk.",
+        "img": "https://i.ibb.co/Bcx9Jh8/Yamaha-R15-M.png",
+        "supplier": "Yamaha"
+    },
+    {
+        
+        "name": "Yamaha XSR 155",
+        "price": "520,000 ",
+        "description": "XSR 155 is a high performing bike which is available in the Bangladesh motorcycle market. XSR 155 Price in BD is 520,000 Tk.",
+        "img": "https://i.ibb.co/71yq6H8/Yamaha-XSR-155.jpg",
+        "supplier": "bikebd"
+    },
+    {
+        
+        "name": "Yamaha FZS FI V3 ",
+        "price": "257,500",
+        "description": "The bike features a design that is striking with a strong presence in the streets. Combined with a refined engine and its performance, this bike delivers benchmark-level performance.",
+        "img": "https://i.ibb.co/Rjnwb0t/Yamaha-FZ-FI-V3-and-FZS-FI-V3-Launched.jpg",
+        "supplier": "bikebd"
+    },
+    {
+        
+        "name": "New Suzuki Gixxer SF",
+        "price": "319,950",
+        "description": "Gixxer SF is a high performing bike which is available in the Bangladesh motorcycle market. Gixxer SF Price in BD is 319,950 Tk",
+        "img": "https://i.ibb.co/Q9DkXhp/New-Suzuki-Gixxer-SF.png",
+        "supplier": "bikebd"
+    },
+ 
+    {
+        
+        "name": "New Suzuki Gixxer",
+        "price": "241,950",
+        "description": "Gixxer ABS is a high performing bike which is available in the Bangladesh motorcycle market. Gixxer ABS Price in BD is 241,950 Tk",
+        "img": "https://i.ibb.co/NZMCPqS/New-Suzuki-Gixxer.png",
+        "supplier": "Suzuki"
+    },
+    {
+        
+        "name": "New TVS Apache RTR 160 4V",
+        "price": "206,900 ",
+        "description": "The new TVS Apache RTR 160 4V comes with a somewhat new design and a completely redesigned head section. The DRLs of the headlights has been brought up with a facelift and has been separated from the headlight section",
+        "img": "https://i.ibb.co/HT3qpFP/New-TVS-Apache-RTR-160-4-V.jpg",
+        "supplier": "bikebd"
+    }
+ 
+ ]
