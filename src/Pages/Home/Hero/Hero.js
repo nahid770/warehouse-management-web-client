@@ -3,18 +3,19 @@ import Carousel from 'react-bootstrap/Carousel';
 import bike1 from '../../../Images/bike1.jpg'
 import bike2 from '../../../Images/bike2.jpg'
 import bike3 from '../../../Images/bike3.jpg'
+import './Hero.css'
 
 const Hero = () => {
     return (
-        <div className='container-fluid rounded-1' >
-            <Carousel className=' mt-1 rounded h-50'>
+        <div id='banner' className=' rounded h-25 pt-5' >
+            <Carousel className=''>
               <Carousel.Item interval={3000}>
                 <img 
                   className="d-block w-100"
                   src={bike1}
                   alt="First slide"
                 />
-                <Carousel.Caption>
+                <Carousel.Caption className='mt-3'>
                   <h3>Life is like riding a bicycle</h3>
                   <p>A bicycle ride around the world begins with a single pedal stroke</p>
                 </Carousel.Caption>

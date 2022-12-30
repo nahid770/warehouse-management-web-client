@@ -1,8 +1,5 @@
 #feature{
-    border-radius: 27px;
-    background: #f7f5f5;
-    box-shadow:  26px 26px 51px #cecece,
-                 -26px -26px 51px #f2f2f2;
+    background-color: rgba(33, 3, 117, 0.034);
 }
 
 .newsletter input{
@@ -14,3 +11,29 @@
     border-radius: 20px;
     
 }
+
+.banner{
+    background-image: url(https://i.ibb.co/mHFvvD6/banner-bike.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: full;
+    height: 768px;
+}
+
+/* .banner-title{
+    position: relative;
+    top: 80px;
+    right: 230px;
+    font-size: 50px;
+    color: white;
+    
+} */
+
+/* .banner-second-title{
+    position: relative;
+    top: 90px;
+    right: 360px;
+    
+    
+} */

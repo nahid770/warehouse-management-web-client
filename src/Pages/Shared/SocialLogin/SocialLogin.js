@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import Loading from '../../Shared/Loading/Loading';
+import './SocialLogin.css'
 
 const SocialLogin = () => {
     const navigate = useNavigate()
@@ -33,14 +34,14 @@ const SocialLogin = () => {
             <div style={{height:'1px'}}className='bg-secondary w-50'></div>
             </div>
             {errorElement}
-            <div>
-                <button onClick={()=> signInWithGoogle()} className='btn border w-50 d-block mx-auto'>
+            <div className=''>
+                <button onClick={()=> signInWithGoogle()} className='btn border bg-light w-50 d-block mx-auto social-login'>
                     <img style={{width:'24px'}} src={google} alt="" />
                     <span className='ps-2 '>Google Sign In</span>
                 </button>
-                <button onClick={()=>signInWithGithub() } className='btn border w-50 d-block mx-auto my-2'>
-                    <img style={{width:'24px'}} src={github} alt="" />
-                    <span className='ps-2 '>Github Sign In</span>
+                <button onClick={()=>signInWithGithub() } className='btn border bg-dark  w-50 d-block mx-auto my-2'>
+                    <img className='' style={{width:'24px'}} src={github} alt="" />
+                    <span className='ps-2 text-light'>Github Sign In</span>
                 </button>
             </div>
         </div>

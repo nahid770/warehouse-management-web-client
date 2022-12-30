@@ -1,14 +1,12 @@
-
-
 @media only screen and (min-width: 768px) {
-    .register{
+    .login{
         width: 300px;
         height: 550px;
     }
     
   }
 @media only screen and (min-width: 1200px) {
-    .register{
+    .login{
         width: 500px;
         height: 550px;
     }

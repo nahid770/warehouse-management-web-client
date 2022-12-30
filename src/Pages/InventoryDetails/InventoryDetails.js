@@ -14,31 +14,81 @@ const InventoryDetails = () => {
     fetch(url)
     .then(res => res.json())
     .then(data => setInventory(data))
-    }, [])
-    
+    }, [id])
+
+    const {name, img, description, price, supplier, quantity } = inventory;
+
+    // handle deliverd item
+    const deliverd = (e) =>{
+        e.preventDefault();
+        const newQuantity = quantity - 1;
+        const newData = {quantity: newQuantity};
+        console.log(newData);
+
+        fetch( `http://localhost:5000/update/${id}`, {
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+
+            body: JSON.stringify(newData),
+        })
+        .then((res)=> res.json())
+        .then((data)=> {
+            console.log(data);
+            window.location.reload();
+        })
+    }
+
+    // update product
+    const updateProduct = (e) =>{
+        e.preventDefault();
+        const number = parseInt(e.target.quantity.value);
+        const newQuantity = parseInt(quantity) + number;
+        const newData = {quantity: newQuantity};
+        console.log(newData)
+        
+        fetch(`http://localhost:5000/update/${id}`, {
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(newData)
+        })
+        .then((res)=> res.json())
+        .then((data)=>{
+            console.log(data)
+            window.location.reload();
+        })
+    }
+
     return (
-        <div>
+        <div className=''>
             <Header></Header>
             
-            <div className='d-flex justify-content-between shadow-sm container borderv my-5'>
+            <div className='d-flex justify-content-between shadow-sm rounded-2 container  my-5'>
                 <div className='w-50'>
-                    <img className='w-50' src={inventory.img} alt="bike" />
+                    <img className='w-50d' src={img} alt="bike" />
                     
                 </div>
-                <div className='w-50 border-start ps-5'>
-                <h2 className='my-3 text-info '>{inventory.name}</h2>
-                <p className='text-start'>{inventory.description}</p>
-                <p className='text-start'>Bike Id: {inventory._id}</p>
-                <p className='text-start'>Price: {inventory.price}</p>
-                <p className='text-start'>Supplier: {inventory.supplier}</p>
-                <p className='text-start'>Quantity: {inventory.quantity}</p>
+                <div className='w-50  ps-5'>
+                <h2 className='my-3 text-info display-5 '>{name}</h2>
+                <p className='text-start fs-5'>{description}</p>
+                <p className='text-start'><span className='fs-5'>Bike Id:</span> {inventory._id}</p>
+                <p className='text-start'><span className='fs-5'>Price:</span> {price}</p>
+                <p className='text-start'><span className='fs-5'>Supplier:</span> {supplier}</p>
+                <p id='quantity' className='text-start'><span className='fs-5'>Quantity:</span> {quantity}</p>
 
                 
-                <div className='d-flex justify-content-between mt-5 pt-3 '>
-                <button className='btn btn-info rounded-sm text-light'>Delivered</button>
+                <div className='d-flex justify-content-between mt-5 pt-2 '>
+                <button onClick={deliverd} className='btn btn-dark rounded-sm text-light' >Delivered</button>
                 <div className='d-flex gap-x-2'>
-                    <input className='rounded-2 border ps-2' type="text" name="number" id="" placeholder='stock item' required/>
-                    <button className='btn btn-info rounded-sm text-light ms-2'>Restock</button>
+
+                    <form onSubmit={updateProduct} action="">
+                    <input className='rounded-2 border ps-2 py-2'  type="number"
+                    name="quantity" id="" placeholder='update stock' required/>
+                    <input className='btn btn-dark ms-2 text-white px-3 py-2' type="submit" value="update" />
+                    </form>
                 </div>
                 </div>
                 </div>

@@ -1,12 +1,13 @@
 import React from 'react';
+import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 
 const Blog = () => {
     return (
-        <div >
+        <div className='pt-5'>
             <Header></Header>
             <div className='ms-5 me-5'>
-            <h3 className='text-white bg-info py-3 rounded mt-2'>What is the difference between Javascript and Nodejs?</h3>
+            <h3 className='text-white bg-info py-3 rounded mt-5 '>What is the difference between Javascript and Nodejs?</h3>
             <p className='p-3 rounded text-white bg-secondary pb-3'>Node js: Node js is a cross-platform and opensourse javascript runtive environment that allows the javascript to be run 
             on the server-side. Nodejs allows javascript code to run on the server and outside of the browser. Nodejs comes with a lot of modules and mostly user in web development.
 
@@ -44,6 +45,7 @@ const Blog = () => {
             </p>
 
             </div>
+            <Footer></Footer>
         </div>
     );
 };

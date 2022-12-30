@@ -1,13 +1,15 @@
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Loading from '../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import './Login.css';
 
 
 
@@ -71,18 +73,18 @@ const Login = () => {
     }
     return ( 
       
-        <div>
+        <div className='pt-5'>
           <Header></Header>
-          <div className='w-50 container mx-auto mt-5  border py-2 bg-secondary bg-opacity-10 rounded-3'>
+          <div className='  mx-auto mt-5  py-2 bg-light shadow-sm border bg-opacity-10 rounded-3 login '>
 
       <h2 className='text-primary text-center mt-2 mb-3'>Please Login</h2>
-    <Form onSubmit={handleSubmit} className="w-50 mx-auto">
+    <Form onSubmit={handleSubmit} className=" mx-auto ">
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control className='py-2' ref={emailRef} type="email" placeholder="Enter email"  required/>
+        <Form.Control className='py-2  w-50 mx-auto' ref={emailRef} type="email" placeholder="Enter email"  required/>
        
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3 w-50 mx-auto" controlId="formBasicPassword">
         <Form.Control className='py-2' ref={passwordRef} type="password" placeholder="Password" required />
       </Form.Group>
      
@@ -95,6 +97,7 @@ const Login = () => {
     <SocialLogin></SocialLogin>
         <ToastContainer />
         </div>
+        <Footer></Footer>
         </div>
     );
 };

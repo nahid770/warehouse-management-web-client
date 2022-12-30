@@ -7,6 +7,7 @@ import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home';
 import Inventory from './Pages/Inventory/Inventory';
 import InventoryDetails from './Pages/InventoryDetails/InventoryDetails';
+import ManageInventoryItems from './Pages/ManageInventoryItems/ManageInventoryItems';
 import ManageItems from './Pages/ManageItems/ManageItems';
 import MyItems from './Pages/MyItems/MyItems';
 import Login from './Pages/Shared/Login/Login';
@@ -30,6 +31,11 @@ function App() {
         <Route path='/inventory' element={
           <RequireAuth>
             <Inventory></Inventory>
+          </RequireAuth>
+      }></Route>
+        <Route path='/allinventory' element={
+          <RequireAuth>
+            <ManageInventoryItems></ManageInventoryItems>
           </RequireAuth>
       }></Route>
         <Route path='/login' element={<Login></Login>}></Route>

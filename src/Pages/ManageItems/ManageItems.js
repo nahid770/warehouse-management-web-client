@@ -4,7 +4,7 @@ import Header from '../Shared/Header/Header';
 
 const ManageItems = () => {
     return (
-        <div>
+        <div className='pt-5'>
             <Header></Header>
             <h2>Manage Items</h2>
             <Footer></Footer>

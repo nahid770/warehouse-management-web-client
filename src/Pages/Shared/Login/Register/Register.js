@@ -6,6 +6,7 @@ import './Register.css'
 import SocialLogin from '../../SocialLogin/SocialLogin';
 import Loading from '../../Loading/Loading';
 import Header from '../../Header/Header';
+import Footer from '../../Footer/Footer';
 
 const Register = () => {
     
@@ -42,11 +43,11 @@ const Register = () => {
         
     }
     return (
-        <div >
+        <div  className='pt-5'>
             <Header></Header>
             
       
-        <div className='w-50 container mx-auto mt-4 py-2 border bg-secondary bg-opacity-10 rounded-3'>
+        <div className='register mx-auto mt-4 py-2 shadow-sm border bg-light bg-opacity-10 rounded-3'>
         <h2 className='text-center mt-3 mb-4 text-primary'> Register Your Account</h2>
         <form action="" onSubmit={handleRegister}>
             <input className='d-block mx-auto w-50 py-2 mb-2 ps-2 rounded-2 border' type="text" name="name" id=""  placeholder='your name'/>
@@ -64,6 +65,7 @@ const Register = () => {
     <SocialLogin></SocialLogin>
     </div>
     </div>
+    <Footer></Footer>
         </div>  
     );
 };
