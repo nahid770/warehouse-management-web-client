@@ -11,6 +11,7 @@ const Footer = () => {
             <Link className='pe-3  text-decoration-none text-info fs-5' to='/'>Home</Link>
             <Link className='pe-3  text-decoration-none text-info fs-5' to='/blog'>Blog</Link>
             <Link className='pe-3  text-decoration-none text-info fs-5' to='/inventory'>inventory</Link>
+            <Link className='pe-3  text-decoration-none text-info fs-5' to='/login'>Login</Link>
 
             <div className='mt-3'> 
                 <p className='text-center text-light '>copyright &copy; 2022, All Rights Reserved</p>

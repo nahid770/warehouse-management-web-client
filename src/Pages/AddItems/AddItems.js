@@ -26,7 +26,7 @@ const AddItems = () => {
             description
         };
 
-        fetch("http://localhost:5000/newProduct", {
+        fetch("https://warehouse-management-server.vercel.app/newProduct", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

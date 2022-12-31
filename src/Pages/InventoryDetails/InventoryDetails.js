@@ -9,7 +9,7 @@ const InventoryDetails = () => {
     const [inventory , setInventory] = useState({});
 
     useEffect(()=>{
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://warehouse-management-server.vercel.app/product/${id}`;
     console.log(url)
     fetch(url)
     .then(res => res.json())
@@ -25,7 +25,7 @@ const InventoryDetails = () => {
         const newData = {quantity: newQuantity};
         console.log(newData);
 
-        fetch( `http://localhost:5000/update/${id}`, {
+        fetch( `https://warehouse-management-server.vercel.app/update/${id}`, {
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'
@@ -48,7 +48,7 @@ const InventoryDetails = () => {
         const newData = {quantity: newQuantity};
         console.log(newData)
         
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://warehouse-management-server.vercel.app/update/${id}`, {
             method: 'PUT',
             headers:{
                 'content-type': 'application/json',

@@ -12,7 +12,7 @@ const MyItems = () => {
     const [bikes, setBikes] = useState([]);
 
     useEffect(()=>{
-        const url = `http://localhost:5000/myItems?email=${user?.email}`
+        const url = `https://warehouse-management-server.vercel.app/myItems?email=${user?.email}`
         // console.log(url)
         fetch(url)
         .then((res)=> res.json())

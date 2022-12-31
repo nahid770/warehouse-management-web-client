@@ -8,7 +8,7 @@ const ManageInventoryItems = () => {
     const [inventoryItems, setinventoryItems] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/product')
+        fetch('https://warehouse-management-server.vercel.app/product')
         .then(res =>res.json())
         .then(data => setinventoryItems(data))
     },[])
@@ -18,7 +18,7 @@ const ManageInventoryItems = () => {
       const agree = window.confirm('Are you sure want to delete this item?');
       
     if(agree){
-      const url = `http://localhost:5000/product/${id}`;
+      const url = `https://warehouse-management-server.vercel.app/product/${id}`;
       fetch(url, {
         method: 'DELETE',
       })
